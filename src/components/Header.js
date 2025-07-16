@@ -13,7 +13,6 @@ export const Header = () => {
       console.log(result)
       setIsAuth(true)
       localStorage.setItem("isAuth", true)
-
     })
   }
 
