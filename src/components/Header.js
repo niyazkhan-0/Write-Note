@@ -3,11 +3,10 @@ import { auth, googleProvider } from "../firebase/config";
 import { signInWithPopup, signOut } from "firebase/auth";
 import Logo from "../assets/logo.png"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 export const Header = () => {
   const [isAuth, setIsAuth] = useState(JSON.parse(localStorage.getItem("isAuth")) || false)
-  const navigate = useNavigate()
 
   function handelLogin() {
     signInWithPopup(auth, googleProvider).then((result) => {
